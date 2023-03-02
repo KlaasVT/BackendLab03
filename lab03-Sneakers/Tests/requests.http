@@ -1,0 +1,32 @@
+@host=localhost:5000/api/v1
+GET http://{{host}}/brands HTTP/1.1
+###
+POST http://{{host}}/sneakers HTTP/1.1
+Content-Type: application/json
+
+{
+  "brand": {
+    "id" : "6400bdf8753df07ec2d5244c",
+    "name": "ASICS"
+  },
+  "name": "Gel Lyte III",
+  "price" : 100,
+  "stock" : 10,
+  "occasions" : [{"OccasionId" : "6400bdf8753df07ec2d52450", "Description" : "sports"},{"OccasionId" : "6400bdf8753df07ec2d52451", "Description":"casual"}]
+}
+###
+GET http://{{host}}/sneakers/6400c1bf6162ff55b56ed09a HTTP/1.1
+###
+POST http://{{host}}/sneakers HTTP/1.1
+Content-Type: application/json
+
+{
+  "brand": {
+    "id" : "6400bdf8753df07ec2d5244c",
+    "name": "PUMA"
+  },
+  "name": "Gel Lyte IV",
+  "price" : 100,
+  "stock" : 10,
+  "occasions" : [{"OccasionId" : "6400bdf8753df07ec2d52450", "Description" : "sports"},{"OccasionId" : "6400bdf8753df07ec2d52451", "Description":"casual"}]
+}
